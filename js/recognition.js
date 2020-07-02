@@ -3,12 +3,12 @@
 //-------------------
 let model;
 
-var canvasWidth           	= 150;
-var canvasHeight 			= 150;
-var canvasStrokeStyle		= "black";
+var canvasWidth           	= 350;
+var canvasHeight 			= 350;
+var canvasStrokeStyle		= "white";
 var canvasLineJoin			= "round";
-var canvasLineWidth       	= 10;
-var canvasBackgroundColor 	= "white";
+var canvasLineWidth       	= 5;
+var canvasBackgroundColor 	= "black";
 var canvasId              	= "canvas";
 
 var clickX = new Array();
@@ -203,10 +203,7 @@ function preprocessCanvas(image) {
 	// resize the input image to target size of (1, 64, 64)
 	let tensor = tf.browser.fromPixels(image)
 		.resizeNearestNeighbor([64, 64])
-		.mean(2)
-		.expandDims(2)
 		.expandDims()
-		.toFloat();
 	console.log(tensor.shape);
 	return tensor.div(255.0);
 }
@@ -270,7 +267,7 @@ function displayChart(data) {
 	var select_model  = document.getElementById("select_model");
   	var select_option = "CNN";
 
-	label = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18",];
+	label = ["Ka", "Ca", "Ta", "Pa", "Ya", "Wa", "Ga", "Ja", "Da", "Ba", "Ra", "Sa", "Nga", "Nya", "Na", "Ma", "La", "Ha"];
 	if (firstTime == 0) {
 		loadChart(label, data, select_option);
 		firstTime = 1;
@@ -283,14 +280,14 @@ function displayChart(data) {
 
 function displayLabel(data) {
 	var max = data[0];
-    var maxIndex = 0;
-
+	var maxIndex = 0;
+	label = ["Ka", "Ca", "Ta", "Pa", "Ya", "Wa", "Ga", "Ja", "Da", "Ba", "Ra", "Sa", "Nga", "Nya", "Na", "Ma", "La", "Ha"];
     for (var i = 1; i < data.length; i++) {
         if (data[i] > max) {
             maxIndex = i;
             max = data[i];
         }
     }
-	$(".prediction-text").html("Predicting you draw <b>"+maxIndex+"</b> with <b>"+Math.trunc( max*100 )+"%</b> confidence")
+	$(".prediction-text").html("Predicting you draw <b>"+label[maxIndex]+"</b> with <b>"+Math.trunc( max*100 )+"%</b> confidence")
 }
 
