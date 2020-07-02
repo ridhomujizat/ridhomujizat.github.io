@@ -5,10 +5,10 @@ let model;
 
 var canvasWidth           	= 150;
 var canvasHeight 			= 150;
-var canvasStrokeStyle		= "white";
+var canvasStrokeStyle		= "black";
 var canvasLineJoin			= "round";
 var canvasLineWidth       	= 10;
-var canvasBackgroundColor 	= "black";
+var canvasBackgroundColor 	= "white";
 var canvasId              	= "canvas";
 
 var clickX = new Array();
@@ -200,9 +200,9 @@ loadModel();
 // preprocess the canvas
 //-----------------------------------------------
 function preprocessCanvas(image) {
-	// resize the input image to target size of (1, 28, 28)
+	// resize the input image to target size of (1, 64, 64)
 	let tensor = tf.browser.fromPixels(image)
-		.resizeNearestNeighbor([28, 28])
+		.resizeNearestNeighbor([64, 64])
 		.mean(2)
 		.expandDims(2)
 		.expandDims()
@@ -270,7 +270,7 @@ function displayChart(data) {
 	var select_model  = document.getElementById("select_model");
   	var select_option = "CNN";
 
-	label = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9100"];
+	label = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18",];
 	if (firstTime == 0) {
 		loadChart(label, data, select_option);
 		firstTime = 1;
