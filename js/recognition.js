@@ -3,8 +3,8 @@
 //-------------------
 let model;
 
-var canvasWidth           	= 350;
-var canvasHeight 			= 350;
+var canvasWidth           	= 250;
+var canvasHeight 			= 250;
 var canvasStrokeStyle		= "white";
 var canvasLineJoin			= "round";
 var canvasLineWidth       	= 5;
@@ -288,6 +288,6 @@ function displayLabel(data) {
             max = data[i];
         }
     }
-	$(".prediction-text").html("Predicting you draw <b>"+label[maxIndex]+"</b> with <b>"+Math.trunc( max*100 )+"%</b> confidence")
+	$(".prediction-text").html("Prediksi Gambar Anda <b>"+label[maxIndex]+"</b> dengan <b>"+Math.trunc( max*100 )+"%</b> confidence")
 }
 
