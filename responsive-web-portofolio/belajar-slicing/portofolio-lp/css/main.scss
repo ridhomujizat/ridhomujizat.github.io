@@ -1,0 +1,35 @@
+//abstract
+@import "./abstracts/mixins";
+@import "./abstracts/variables";
+
+//Layout
+@import "./layout/navbar";
+
+//Component
+@import "./components/sidedrawer";
+@import "./components/jumbotron";
+@import "./components/about";
+@import "./components/showcase";
+@import "./components/testimonial";
+@import "./components/footer";
+//reset
+@import "./base/reset";
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "inter";
+  margin: 0;
+}
+
+.container {
+  width: 95%;
+  margin: 0 auto;
+
+  @include desktop {
+    width: 90%;
+  }
+  @include desktop {
+    width: 85%;
+  }
+}

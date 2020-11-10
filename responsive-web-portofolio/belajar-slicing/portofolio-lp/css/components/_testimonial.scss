@@ -1,0 +1,62 @@
+.testimonial {
+  margin: 90px auto;
+  text-align: center;
+
+  @include tablet {
+    margin-top: 150px;
+  }
+
+  .profile {
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    margin: 50px auto;
+
+    &__picture {
+      width: 50px;
+      height: 43px;
+      overflow: hidden;
+      margin-right: 20px;
+      border-radius: 50%;
+      border: 3px solid white;
+      box-shadow: 10px 10px 30px rgba($color: #8f8f8f, $alpha: 0.4);
+
+      @include tablet {
+        height: 50px;
+      }
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  &__bio {
+    &__name {
+      font-weight: bold;
+      font-size: 1.4em;
+      margin: 0;
+    }
+    &__role {
+      margin: 10px;
+      color: $baseText;
+      font-size: 1em;
+    }
+  }
+
+  &__content {
+    p {
+      line-height: 1.4;
+      color: $baseText;
+      font-size: 1.2em;
+    }
+
+    &__stars {
+      .star {
+        color: #d8d8d8;
+      }
+      .star.active {
+        color: $yellowText;
+      }
+    }
+  }
+}

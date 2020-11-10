@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stewar Portofolio</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;1,100&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body id="home">
+    <div class="sidedrawer">
+      <ul class="list__component">
+        <li><a href="#home">home</a></li>
+        <li><a href="#about">about</a></li>
+        <li><a href="#work">work</a></li>
+        <li><a href="#testimonial">testimonial</a></li>
+      </ul>
+    </div>
+    <div class="backdrop"></div>
+
+    <!-- Navbar -->
+    <header id="navbar">
+      <div class="container">
+        <nav class="navbar">
+          <div class="navbar__brand">
+            <p class="navbar__brand__logo">Logo<span>.</span></p>
+            <div id="bars">
+              <span
+                class="iconify"
+                data-icon="fa-solid:bars"
+                data-inline="false"
+              ></span>
+            </div>
+          </div>
+          <div class="navbar__list">
+            <ul class="list__component">
+              <li><a href="#home">home</a></li>
+              <li><a href="#about">about</a></li>
+              <li><a href="#work">work</a></li>
+              <li><a href="#testimonial">testimonial</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!---Navbar-->
+
+    <!---jumbotron-->
+    <div class="jumbotron">
+      <div class="jumbotron__image">
+        <img src="assets/profile.png" alt="" />
+      </div>
+      <div class="jumbotron__content">
+        <p class="jumbotron__content__name"><span>Hi! I am </span>Steward</p>
+        <p class="jumbotron__content__role">UI/UX Designer</p>
+        <a href="#work" class="jumbotron__content__cta"
+          >MyProject <img src="assets/arrow.svg" alt=""
+        /></a>
+
+        <!---Push to bottom-->
+        <div class="jumbotron__content__socials">
+          <ul style="padding: 0">
+            <li>
+              <a href="#">
+                <span
+                  class="iconify"
+                  data-icon="bx:bxl-facebook"
+                  data-inline="false"
+                ></span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span
+                  class="iconify"
+                  data-icon="ant-design:instagram-outlined"
+                  data-inline="false"
+                ></span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span
+                  class="iconify"
+                  data-icon="ant-design:dribbble-outlined"
+                  data-inline="false"
+                ></span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!--- jumbotron-->
+
+    <!--About-->
+    <div class="container">
+      <section id="about">
+        <div class="about">
+          <div class="about__image">
+            <img src="assets/about.png" alt="" />
+          </div>
+          <div class="about__content">
+            <h2>
+              Have 4+ years <br />
+              Experience <br />
+              Building <br />
+              <span>Digital Product</span>
+            </h2>
+            <p class="content">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus
+              sed vitae enim dui elementum, amet. Ultrices congue enim justo,
+              risus. Quis amet, at sit arcu, id arcu. Iaculis interdum sem
+              neque, vulputate sed. Risus in sagittis augue nisl commodo,
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!--About-->
+
+    <!--Show Case-->
+    <div class="container">
+      <section id="work">
+        <div class="showcase">
+          <div class="showcase__text">
+            <h2>Showcase</h2>
+            <p class="content">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus
+              sed vitae enim dui elementum, amet. Ultrices congue enim justo,
+              risus. Quis amet, at sit arcu, id arcu. Iaculis interdum sem
+              neque, vulputate sed. Risus in sagittis augue nisl commodo,
+            </p>
+          </div>
+          <div class="showcase__collection">
+            <div class="showcase__collection__images" id="showcaseImage"></div>
+          </div>
+          <div class="showcase__indicator">
+            <div class="indicator active" id="1"></div>
+            <div class="indicator" id="2"></div>
+            <div class="indicator" id="3"></div>
+            <div class="indicator" id="4"></div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!---Show Case-->
+
+    <!--Testimonial-->
+    <div class="container">
+      <section id="testimonial">
+        <div class="testimonial">
+          <h2>Happy Clients</h2>
+          <div class="profile">
+            <div class="profile__picture 0">
+              <img src="assets/client-1.png" alt="" id="person-0" />
+            </div>
+            <div class="profile__picture 1">
+              <img src="assets/client-2.png" alt="" id="person-1" />
+            </div>
+            <div class="profile__picture 0">
+              <img src="assets/client-3.png" alt="" id="person-2" />
+            </div>
+          </div>
+
+          <div class="testimonial__bio">
+            <p class="testimonial__bio__name"></p>
+            <p class="testimonial__bio__role"></p>
+          </div>
+
+          <div class="testimonial__content">
+            <p class="testimonial__content__text"></p>
+            <div class="testimonial__content__stars">
+              <span
+                class="iconify star active"
+                data-icon="entypo:star"
+                data-inline="false"
+              ></span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!---Testimonial-->
+
+    <!---Footer-->
+    <footer>
+      <a href="#" class="logo">Logo<span>.</span></a>
+      <p>Tutorial From @bitunidev</p>
+    </footer>
+    <!--Footer-->
+    <script src="https://unpkg.com/jarallax@1/dist/jarallax.min.js"></script>
+    <script src="https://unpkg.com/jarallax@1/dist/jarallax-element.min.js"></script>
+
+    <script src="js/script.js"></script>
+    <script src="https://code.iconify.design/2/2.0.0-rc.2/iconify.min.js"></script>
+  </body>
+</html>
