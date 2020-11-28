@@ -1,0 +1,286 @@
+/*!
+ * Bootstrap v4.5.3 (https://getbootstrap.com/)
+ * Copyright 2011-2020 The Bootstrap Authors
+ * Copyright 2011-2020 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+ */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,300&display=swap");
+
+@import "functions";
+@import "variables";
+@import "mixins";
+@import "root";
+@import "reboot";
+@import "type";
+@import "images";
+@import "code";
+@import "grid";
+@import "tables";
+@import "forms";
+@import "buttons";
+@import "transitions";
+@import "dropdown";
+@import "button-group";
+@import "input-group";
+@import "custom-forms";
+@import "nav";
+@import "navbar";
+@import "card";
+@import "breadcrumb";
+@import "pagination";
+@import "badge";
+@import "jumbotron";
+@import "alert";
+@import "progress";
+@import "media";
+@import "list-group";
+@import "close";
+@import "toasts";
+@import "modal";
+@import "tooltip";
+@import "popover";
+@import "carousel";
+@import "spinners";
+@import "utilities";
+@import "print";
+
+html {
+  scroll-behavior: smooth;
+}
+
+@mixin tablet {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media (min-width: 992px) {
+    @content;
+  }
+}
+
+body {
+  font-family: "Poppins";
+  h3 {
+    font-weight: 600;
+  }
+}
+
+.costum-navbar {
+  .navbar-brand {
+    img {
+      width: 50px;
+    }
+    span {
+      font-weight: 700;
+    }
+  }
+
+  .navbar-nav {
+    .nav-item {
+      margin-right: 1.2em;
+    }
+    .active {
+      font-weight: 600;
+    }
+  }
+}
+
+.jumbotron {
+  margin-top: 7rem;
+  padding: 0;
+
+  .content {
+    p {
+      color: $gray-500;
+    }
+    h1.semibold {
+      font-weight: 600;
+    }
+    h1.h2 {
+      font-size: 1.1rem;
+
+      @include tablet() {
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+//Jumbrot end
+
+//Aboutme
+.aboutme {
+  padding: 5rem 0;
+  .section-line {
+    display: none;
+    @include tablet() {
+      display: block;
+      width: 50px;
+      height: 3px;
+      background: black;
+      margin: 1.5em 0em;
+    }
+  }
+  h3 {
+    font-weight: 600;
+  }
+
+  p {
+    font-size: 14px;
+    color: $gray-600;
+  }
+  a {
+    font-size: 12px;
+  }
+}
+
+//Portofolio
+@mixin card-costum($color) {
+  position: relative;
+  border-radius: 3%;
+  border-top: 5px solid $color;
+  min-height: 240px;
+}
+.portofolio {
+  h3 {
+    font-weight: 600;
+  }
+  p {
+    color: $gray-500;
+  }
+
+  .card-link {
+    .card {
+      text-decoration: none;
+      margin: 10px auto;
+      transition: 0.3s ease 0s;
+
+      .card-body {
+        color: black;
+      }
+      &:hover {
+        box-shadow: 0px 4px 44px 10px rgba(0, 0, 0, 0.17);
+      }
+    }
+  }
+
+  .card-1 {
+    @include card-costum($red);
+    .card-text {
+      margin-bottom: 45px;
+
+      @include tablet() {
+        margin-bottom: 40px;
+      }
+      @include desktop() {
+        margin-bottom: 35px;
+      }
+    }
+    &:hover {
+      .open {
+        color: $red;
+      }
+    }
+  }
+  .card-2 {
+    @include card-costum($green);
+
+    .card-text {
+      margin-bottom: 65px;
+    }
+    &:hover {
+      .open {
+        color: $green;
+      }
+    }
+  }
+
+  .card-3 {
+    @include card-costum($yellow);
+
+    .card-text {
+      margin-bottom: 85px;
+    }
+    &:hover {
+      .open {
+        color: $yellow;
+      }
+    }
+  }
+}
+
+.social-media {
+  .social-item {
+    margin: 5px;
+    img {
+      width: 25px;
+      height: auto;
+
+      @include tablet() {
+        width: 45px;
+      }
+    }
+  }
+}
+
+footer {
+  p {
+    color: $gray-500;
+  }
+}
+
+//Portofolio page
+
+//title
+.title {
+  margin-top: 7rem;
+}
+
+.portofolio-card {
+  .card {
+    border-radius: 3%;
+    margin: 10px auto;
+    transition: 0.3s ease 0s;
+
+    &:hover {
+      box-shadow: 0px 4px 44px 10px rgba(0, 0, 0, 0.17);
+    }
+
+    .img-portofolio {
+      max-height: 200px;
+      overflow: hidden;
+      img {
+      }
+    }
+
+    .card-body {
+      h5 {
+        font-weight: 600;
+      }
+      .card-text {
+        color: $gray-600;
+      }
+
+      .tech {
+        font-size: 12px;
+        a {
+          text-decoration: none;
+        }
+        span {
+          font-weight: 600;
+        }
+      }
+
+      .iconify {
+        color: $gray-600;
+        width: 15px;
+        height: 15px;
+
+        &:hover {
+          color: $gray-900;
+        }
+      }
+    }
+  }
+}

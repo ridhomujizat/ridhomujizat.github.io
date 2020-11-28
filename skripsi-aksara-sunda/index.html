@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Klasifikasi AksaraSundaCNN</title>
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+
+      
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" >
+      	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+      	<script src="js/chart.min.js"></script>
+      	<script src="js/tfjs.js"></script>
+        <link href="css/styles.css" rel="stylesheet" />
+
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+          <a class="navbar-brand js-scroll-trigger" href="#page-top">
+              </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skripsi">Skripsi</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#model">Model</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#klasifikasi">Pengenalan Tulisan Tangan</a></li>
+            </ul>
+          </div>
+      </nav>
+        <!-- Page Content-->
+        <div class="container-fluid p-0">
+            <!-- About-->
+            <section class="resume-section" id="skripsi">
+                <div class="resume-section-content">
+                    <h2 class="mb-0">
+                      IMPLEMENTASI CONVULATIONAL NEURAL NETWORK PADA PENGENALAN TULISAN TANGAN AKSARA SUNDA
+                    </h2>
+                    <div class="subheading mb-5">
+                        Ridho - 
+                        <span class="text-primary">1610631170181</span>
+                    </div>
+                    <p class="lead mb-3">
+                      Berikut merupakan hasil dari penelitian yang telah dilakukan.
+                    </p>
+                    <div class="social-icons">
+                        <a class="btn source-code btn-lg" href="https://github.com/ridhomujizat/AksaraSundaCNN" target="_blank"><img src="https://www.tensorflow.org/images/GitHub-Mark-32px.png">View source on GitHub</a>
+                    </div>                
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Model-->
+            <section class="resume-section" id="model">
+                <div class="resume-section-content">
+                    <h3 class="mb-1">Model</h3>
+                    <div class="d-flex flex-column flex-md-row justify-content-between">
+                      <div class="flex-grow-1">
+                        <p class="lead mb-5">
+                          Berikut Model Arsitetur CNN yang digunakan pada Pengenalan Tulisan Tangan Aksara Sunda.
+                        </p>
+                        <div class="social-icons">
+                            <a class="btn source-code btn-lg" href="https://github.com/ridhomujizat/AksaraSundaCNN/blob/master/Skripsi.ipynb" target="_blank"><img src="https://4.bp.blogspot.com/-BD3ZGiGy9Ms/WuJdYMbSh3I/AAAAAAACPrc/jePCk-BAX_g3_BED91p_zFgqDBJ4lR_JQCLcBGAs/s1600/jupyter.png">Full Notebook on GitHub</a>
+                        </div>   
+                      </div>
+                        <div class="flex-grow-1 source-git">
+                          <script src="https://gist.github.com/ridhomujizat/ea85895e6b4d8e227827874bb5e26f9b.js"></script>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+             <!-- Model-->
+             <section class="resume-section" id="klasifikasi">
+              <div class="resume-section-content">
+                  <h3 class="mb-3">Pengenalan TUlisan Tangan</h3>
+                  <div class="d-flex flex-column flex-md-row justify-content-between">
+                    <div class="flex-grow-1" >
+                      <div id="canvas_box_wrapper" class="canvas-box-wrapper">
+                        <div id="canvas_box" class="canvas-box"></div>
+                        <div class="mb-2 " id="btn-predic">
+                          <button id="predict-button" class="btn btn-success ">Predict</button>
+                          <button id="clear-button" class="btn btn-danger">Clear</button>                        
+                        </div>
+                        <p class="lead ">
+                          *Hanya aksara sunda ngalegena
+                        </p>
+
+                      </div>
+                    </div>
+                    <div class="flex-grow-1 source-git ">
+                      <div class="col-12 d-block mt-2 mt-md-0 text-md-left mb-3 prediction-text"></div>                    
+                      <div id="result_box" class="col-12 col-md-7">
+                        <canvas id="chart_box" width="100" height="100"></canvas>
+                      </div>
+                      
+                  </div>
+              </div>
+          </section>
+          <hr class="m-0" />
+            
+
+        </div>
+        <script src="js/recognition.js"></script>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
